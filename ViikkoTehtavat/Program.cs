@@ -14,6 +14,8 @@ namespace ViikkoTehtavat
             //Tehtava2();
             //Tehtava3();
             //Tehtava4();
+            //Tehtava5();
+            //Tehtava6();
         }
 
         static void Tehtava1()
@@ -119,5 +121,32 @@ namespace ViikkoTehtavat
             Console.WriteLine("Seniori");
             
         }
+        static void Tehtava5()
+        {
+            //Tee ohjelma, joka näyttää annetun sekuntimäärän tunteina, minuutteina ja sekunteina. Aikamääre sekuntteina kysytään käyttäjältä. 
+            Console.Write("Anna sekunnit > ");
+            string retval = Console.ReadLine();
+            int sekuntit = int.Parse(retval);
+            int tunnit = (sekuntit / 3600);
+            int minuutit = (sekuntit % 3600) / 60;
+            int loput = (sekuntit % 3600) % 60;
+
+            Console.WriteLine("Antamasi sekunttiaika voidaan ilmaista muodossa: {0} tunti {1} minuutti {2} sekuntti", tunnit, minuutit, loput);
+        }
+        static void Tehtava6()
+        {
+            //Auton kulutus on 7.02 litraa 100 kilometrin matkalla ja bensan hinta on 1.595 Euroa. Tee ohjelma, joka tulostaa ajetulla 
+            //matkalla (kysytään käyttäjältä) kuluvan bensan määrän sekä bensaan menevän rahan määrän. 
+            Console.Write("Anna matka > ");
+            string retval = Console.ReadLine();
+            double matka = int.Parse(retval);
+            double hinta = 1.595, kulutus = 7.02;
+            double kulutusLopullinen, kustannus;
+            kulutusLopullinen = Math.Round(((matka / 100) * kulutus), 2);
+            kustannus = Math.Round((kulutusLopullinen * hinta), 2);
+
+            Console.WriteLine("Bensaa kuluu {0} litraa, kustannus {1} euroa", kulutusLopullinen, kustannus);
+        }
+
     }
 }
