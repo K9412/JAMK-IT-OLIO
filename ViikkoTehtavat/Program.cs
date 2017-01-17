@@ -13,6 +13,7 @@ namespace ViikkoTehtavat
             //Tehtava1();
             //Tehtava2();
             //Tehtava3();
+            //Tehtava4();
         }
 
         static void Tehtava1()
@@ -96,6 +97,27 @@ namespace ViikkoTehtavat
             summa = luvut[0] + luvut[1] + luvut[2];
             keskiarvo = (summa / 3);
             Console.WriteLine("Lukujesi summa: {0}, ja keskiarvo: {1}", summa, keskiarvo);
+        }
+        static void Tehtava4()
+        {
+            //Tee ohjelma, jossa kysytään käyttäjältä tämän ikä. Jos ikä on alle 18 vuotta, 
+            //tulosta "alaikäinen", jos se on 18-65 vuotta, tulosta "aikuinen", 
+            //muussa tapauksessa tulosta "seniori". 
+            Console.Write("Anna ikasi > ");
+            string retval = Console.ReadLine();
+            int ika = int.Parse(retval);
+            if (ika < 18)
+            {
+                Console.WriteLine("Alaikainen");
+                return;
+            }
+            if (ika >= 18 && ika <= 65)
+            {
+                Console.WriteLine("Aikuinen");
+                return;
+            }
+            Console.WriteLine("Seniori");
+            
         }
     }
 }
