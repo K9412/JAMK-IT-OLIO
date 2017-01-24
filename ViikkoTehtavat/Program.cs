@@ -21,7 +21,7 @@ namespace ViikkoTehtavat
             //Tehtava9();
             //Tehtava10();
             //Tehtava11();
-            //Tehtava12();
+            Tehtava12();
             //Tehtava13();
             //Tehtava14();
             //Tehtava15();
